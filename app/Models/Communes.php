@@ -16,4 +16,10 @@ class Communes extends Model
     protected $primaryKey = 'id_com';
 
     public $timestamps = false;
+
+    //Relacion con RegionS
+    public function region()
+    {
+        return $this->hasOne(Regions::class, 'id', 'id_reg');
+    }
 }
