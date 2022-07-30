@@ -77,7 +77,7 @@ class ValidateRequest
             //Error en caso de una excepcion en la validacion
             return response()->json([
                 'success' => false,
-                'msg' => 'Faltan Datos | Valide e intente de nuevo.'
+                'msg' => 'Datos Invalidos | Valide e intente de nuevo.'
             ], 400);
 
         }

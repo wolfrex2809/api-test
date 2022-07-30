@@ -136,12 +136,12 @@ class MainController extends Controller
             }else{
 
                 if (env('APP_DEBUG')) {
-                    Logs::newLog($request, 'O', 'error', 'Se ha producido un Error al intentar eliminar un Customer');
+                    Logs::newLog($request, 'O', 'error', 'Se ha producido un Error al intentar eliminar un Customer (No existe)');
                 }
                 //Error en caso de no haberse eliminado
                 return response()->json([
                     'success' => false,
-                    'msg' => 'Se ha producido un Error al intentar eliminar un Customer.'
+                    'msg' => 'Registro no existe.'
                 ]);
             }
         } catch (QueryException $e) {
